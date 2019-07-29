@@ -1,0 +1,4 @@
+<!--Default values.-->
+<component>
+    <option name="host" value="http://localhost:8500/" />
+</component>

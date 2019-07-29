@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>idea.plugin.cf.testbox</id>
+    <name>IDEA ColdFusion TestBox</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description>
+        <![CDATA[IDEA ColdFusion TestBox]]>
+    </description>
+
+    <change-notes>
+        <![CDATA[Initial commit.]]>
+    </change-notes>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable instance="idea.plugin.cf.testbox.ui.PluginSettings"/>
+        <applicationService serviceImplementation="idea.plugin.cf.testbox.config.TestBoxConfig"/>
+        <applicationService serviceImplementation="idea.plugin.cf.testbox.service.TestBoxService"/>
+        <applicationService serviceImplementation="idea.plugin.cf.testbox.service.TestBoxFolderFinder"/>
+    </extensions>
+
+    <actions>
+        <action id="Testbox.Run" class="idea.plugin.cf.testbox.action.RunTestAction" text="TestBox Run Test"
+                icon="/icons/testbox.png">
+            <add-to-group group-id="EditorTabPopupMenu"/>
+        </action>
+    </actions>
+</idea-plugin>
